@@ -4,3 +4,4 @@
 Hello
 This is from second file
 
+This is updating using cat command
