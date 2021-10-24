@@ -14,7 +14,7 @@ stage('UploadArtifactIntoNexus'){
 sh "${mavenHome}/bin/mvn deploy"
 }
 stage('DeploAppIntoTomcat'){
-sshagent(['f57c450c-1d12-4f23-a8e0-50da167ff56c']) {
+sshagent(['adapalaDeepika']) {
 sh "scp -o StrictHostKeyChecking=no target/maven-web-application.war ec2-user@13.232.30.144:/opt/apache-tomcat-9.0.50/webapps/"
 }
 }
